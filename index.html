@@ -9,49 +9,60 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/90ecaa9788.js" crossorigin="anonymous"></script>
-<link rel="icon" src="img/icon.png"/>
-<link rel="stylesheet" src="/style.css"/>
+<link rel="icon" src="img/icon.PNG"/>
+<link rel="stylesheet" href="/style.css"/>
 </head>
 
     <body>
-        <div class="container">
-
-
-        
+        <div class="container"> <header class="profile-section">
         <h1>Welcome to my world!—I'm Chris.</h1>
-        <p>I love nature and exploration.</p>
+        <p class="tagline">I love nature and exploration.</p>
+        </header>
 
-        <h3>What I've Been Working On</h3>
-        
-        <ul>     
-        <li>Full time B.S. in Computer Science at WGU</li>
-        <li>Raspberry Pi controlled grow box
-             <br>Lions Mane and other herbs</li>
-        <li>Training for the 2026 Chevron Marathon</li>
-        <li>Building a network of professional peers</li>
-        </ul>
+        <section class-"content-section">
+            <h3>What I've Been Working On</h3>
+            <ul>     
+                <li>Full time B.S. in Computer Science at WGU</li>
+                <li>Raspberry Pi controlled grow box
+                    <br>Lions Mane and other herbs
+                </li>
+                <li>Training for the 2026 Chevron Marathon</li>
+                <li>Building a network of professional peers</li>
+            </ul>
 
-        <h3>What I've Done & What I'm Into</h3>
-        
-        <ul>
-        <li>Running <br> Half marathon in 2:12:03 <a href="https://raceday.enmotive.com/#/events/2023-santa-rosa-marathon/registrants/395955ef-3a6e-49c3-8a44-10112f8f3b0f" target="_blank">Race Results</a></li>
-        <li>Learning <br> Rice Cybersecurity Bootcamp [Repo hyperlink]</li>
-        <li>Music and Arts <br> Guitar hyperlink <br> Photo portfolio link
-        </li>
-        
-        </ul>
-        </div>
+            <h3>What I've Done & What I'm Into</h3>
+            <ul>
+                <li>Running <br> Half marathon in 2:12:03 <a href="https://raceday.enmotive.com/#/events/2023-santa-rosa-marathon/registrants/395955ef-3a6e-49c3-8a44-10112f8f3b0f" target="_blank">Race Results</a></li>
+                <li>Learning <br> Rice Cybersecurity Bootcamp [Repo hyperlink]</li>
+                <li>Music and Arts <br> Guitar hyperlink <br> Photo portfolio link
+                </li>
+            </ul>
+        </section>
+
+        <section class="connect-section">
         <h2>Where You Can Reach Me</h2>
         <div class="connect">
-            <a class="socials" href="https://github.com/c-asonye" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a></li>
-            <br><a class="socials" href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i>X (Twitter)</a></li>
-            <br><a class="socials" href="https://www.linkedin.com/in/casonye99/" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
-            <br><a class="socials" href="mailto:chr.asonye@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a></li>
-            <br><a class="socials" href="https://c-asonye.github.io/" target="_blank"><i class="fa-solid fa-blog"></i>Website</a></li> 
-          </div>
+            <a class="social-button" href="https://github.com/c-asonye" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a></li>
+            <a class="social-button" href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i>X (Twitter)</a></li>
+            <a class="social-button" href="https://www.linkedin.com/in/casonye99/" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
+            <a class="social-button" href="mailto:chr.asonye@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a></li>
+            <a class="social-button" href="https://c-asonye.github.io/" target="_blank"><i class="fa-solid fa-blog"></i>Website</a></li> 
+        </section>
 
-          <hr>
+        <hr>
 
-    </body>
+        <footer class="footer-section">
+            <p>&copy; <span id-"current-year"></span> Chris Asonye. All rights reserved</p>
+        </footer>
+    </div> <script>
+           //JS to set cureent year in footer
+           docunent.addEventListener('DOMContentLoaded', function() {
+            const currentYearSpan = document.getElementById('current-year');
+            if (currentYearSpan){
+                currentYearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
 
 </html>

@@ -1,71 +1,240 @@
+/* General Body Styles */
 body {
-font-family: 'Funnel Display', sans-serif; 
-line-height: 1.6;
-background-color: #f0f0f0;
-color:#333; 
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh; 
+    font-family: 'Funnel Display', sans-serif; /* Using your specified font */
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); /* Example vibrant gradient */
+    color: #f0f0f0; /* Light text color for contrast */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top */
+    min-height: 100vh; /* Ensure full viewport height */
+    box-sizing: border-box;
 }
 
-/* Main container for the landing page */
+/* Container for all content */
 .container {
-text-align: center;
-background-color: white; 
-border-radius: 8px; 
-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
-padding: 20px;
-max-width: 600px; 
-width: 90%; 
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+    border-radius: 25px; /* More rounded corners */
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+    text-align: center;
+    max-width: 550px; /* Slightly wider container */
+    width: 100%;
+    margin-top: 50px;
+    backdrop-filter: blur(8px); /* Stronger frosted glass effect */
+    -webkit-backdrop-filter: blur(8px); /* For Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle light border */
 }
 
-/* Main headline */
+/* Profile Section */
+.profile-section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator line */
+}
+
+/* If you add a profile picture */
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffcc00; /* Gold border */
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.5); /* Glowing effect */
+    margin-bottom: 25px;
+}
+
 h1 {
-font-size: 2.5rem; 
-margin-bottom: 15px; 
-color: #007bff; 
+    font-size: 3em; /* Larger heading */
+    margin-bottom: 10px;
+    color: #ffd700; /* Gold color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for depth */
 }
 
-/* Subheading */
+.tagline {
+    font-size: 1.3em;
+    color: #c0c0c0;
+    margin-bottom: 0;
+}
+
+/* Content Sections (What I've Been Working On, What I've Done) */
+.content-section {
+    text-align: left; /* Align text to the left within this section */
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h3 {
+    font-size: 1.8em;
+    color: #90ee90; /* Light green for subheadings */
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center; /* Center the subheadings */
+}
+
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: rgba(255, 255, 255, 0.05); /* Subtle background for list items */
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    line-height: 1.5;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+li a {
+    color: #87ceeb; /* Light blue for links within list items */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+/* Connect Section (Social Buttons) */
+.connect-section {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px; /* Space between buttons */
+    margin-bottom: 40px;
+}
+
 h2 {
-font-size: 1.5rem; 
-margin-bottom: 10px; 
+    font-size: 2.2em;
+    color: #add8e6; /* Light blue for "Where You Can Reach Me" */
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* Paragraph text */
-p {
-font-size: 1rem; 
-margin-bottom: 20px;
+.social-button {
+    display: flex;
+    align-items: center; /* Vertically align icon and text */
+    justify-content: center; /* Center horizontally */
+    background: linear-gradient(45deg, #4CAF50, #2E8B57); /* Green gradient button */
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 12px; /* Slightly more rounded buttons */
+    text-decoration: none;
+    font-size: 1.3em; /* Larger font size for buttons */
+    font-weight: bold;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border: none; /* Remove default button border */
 }
 
-/* Button styles 
-.button {
-display: inline-block; 
-background-color: #007bff; 
-color: white; 
-padding: 10px 20px; 
-border: none; 
-border-radius: 4px; 
-text-decoration: none; 
-font-size: 1rem; 
-transition: background-color 0.3s; 
+.social-button:hover {
+    background: linear-gradient(45deg, #2E8B57, #4CAF50); /* Invert gradient on hover */
+    transform: translateY(-5px) scale(1.02); /* Lift and slightly enlarge */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
 }
 
- Button hover effect 
-.button:hover {
-background-color: #0056b3; 
+.social-button i {
+    margin-right: 12px; /* Space between icon and text */
+    font-size: 1.6em; /* Larger icons */
 }
 
+/* Horizontal Rule Styling */
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 40px 0;
+}
+
+/* Footer Section */
+.footer-section {
+    font-size: 0.9em;
+    color: #a0a0a0;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-h1 {
-font-size: 2rem; 
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 25px;
+        margin-top: 30px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .tagline {
+        font-size: 1.1em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .social-button {
+        padding: 12px 20px;
+        font-size: 1.1em;
+    }
+
+    .social-button i {
+        font-size: 1.3em;
+    }
+
+    li {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
 }
 
-h2 {
-font-size: 1.25rem;  
-}
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        margin-top: 15px;
+    }
 
-.button {
-padding: 8px 16px;  
-} */
+    h1 {
+        font-size: 2em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    .social-button {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+
+    .social-button i {
+        font-size: 1.2em;
+        margin-right: 8px;
+    }
+
+    li {
+        font-size: 0.95em;
+    }
+}
